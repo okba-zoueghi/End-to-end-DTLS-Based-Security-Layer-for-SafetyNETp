@@ -1,0 +1,20 @@
+[0] Config.pm:340> INFO - This is Biber 2.4
+[0] Config.pm:343> INFO - Logfile is 'main.blg'
+[70] biber:287> INFO - === sam. août 18, 2018, 21:25:45
+[237] Biber.pm:348> INFO - Reading 'main.bcf'
+[403] Biber.pm:742> INFO - Found 20 citekeys in bib section 0
+[553] Biber.pm:3151> INFO - Processing section 0
+[728] Biber.pm:3308> INFO - Looking for bibtex format file 'bib/bibliography.bib' for section 0
+[772] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[801] bibtex.pm:974> INFO - Found BibTeX data source 'bib/bibliography.bib'
+[969] Utils.pm:147> WARN - BibTeX subsystem: /tmp/o5AnBNbYB7/bibliography.bib_6914.utf8, line 21, warning: undefined macro "March"
+[969] Utils.pm:147> WARN - BibTeX subsystem: /tmp/o5AnBNbYB7/bibliography.bib_6914.utf8, line 32, warning: undefined macro "July"
+[970] Utils.pm:147> WARN - The field 'month' in entry 'draftTLSv1.3' cannot be null, deleting it
+[970] Utils.pm:147> WARN - The field 'month' in entry 'draftDTLSv1.3' cannot be null, deleting it
+[1158] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1158] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1158] Biber.pm:3028> INFO - Sorting list 'none/global' of type 'entry' with scheme 'none' and locale 'en-US'
+[1158] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
+[1176] bbl.pm:519> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1222] bbl.pm:615> INFO - Output to main.bbl
+[1223] Biber.pm:109> INFO - WARNINGS: 4

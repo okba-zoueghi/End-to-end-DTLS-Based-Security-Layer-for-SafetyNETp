@@ -1,0 +1,163 @@
+%-------------------------------------------------------------------------------
+%
+%       Filename:  personal_macros.tex
+%
+%    Description:  All macros that are not changing document behavior go here
+%    e.g. macros for names and else
+%
+%        Version:  0.1
+%        Created:  28.04.2016
+%       Revision:  none
+%
+%         Author:  M.Sc. Oliver Kehret, oliver.kehret@hs-offenburg.de
+%   Organization:  ivESK, Offenburg University, Germany
+%      Copyright:  Copyright (c) 2016, M.Sc. Oliver Kehret
+%
+%-------------------------------------------------------------------------------
+% ivESK macros
+%-------------------------------------------------------------------------------
+%
+%-------------------------------------------------------------------------------
+% Language robust
+%-------------------------------------------------------------------------------
+%
+\newcommand{\myauthor}{Okba ZOUEGHI}% create more authors on demand
+\newcommand{\mytown}{Offenburg\xspace}
+\newcommand{\myuniversitystreet}{Badstraße~24\xspace}
+\newcommand{\myuniversitypostalno}{77652\xspace}
+\newcommand{\myinstitutehead}{Prof. Dr.-Ing. Axel Sikora\xspace}
+\newcommand{\mysupervisor}{Prof. Dr.-Ing. Axel Sikora\xspace}
+\newcommand{\hsogmailend}{@hs-offenburg.de\xspace}
+\newcommand{\hsogmailendstud}{@stud.hs-offfenburg.de\xspace}
+%-------------------------------------------------------------------------------
+% Switch between german and english
+%-------------------------------------------------------------------------------
+%
+\IfLanguageName{ngerman}{%
+\newcommand{\mykeywords}{<+mykeywordsde+>}
+\newcommand{\myproject}{<+myprojectde+>}
+\newcommand{\myversion}{<+myversionde+>}
+\newcommand{\mygrade}{<+mygradede+>}
+\newcommand{\mytitle}{<+mytitlede+>}
+\newcommand{\mydocumenttitle}{<+documenttitlede+>}
+\newcommand{\mydocumentsubtitle}{<+mysubtitle+>}
+\newcommand{\myuniversity}{Hochschule \mytown\xspace}
+\newcommand{\myinstitute}{Institut für verlässliche Embedded Systems und Kommunikationselektronik\xspace}
+\newcommand{\mylistofabbrivations}{Abkürzungsverzeichnis}
+\newcommand{\mylistings}{Quellcodeverzeichnis}
+\newcommand{\myauthorchapter}{Autoren}
+\newcommand{\myhistory}{Versionen}
+\newcommand{\mydate}{Datum}
+\newcommand{\mysummaryofchanges}{Zusammenfassung der {\"A}nderungen}
+}{}%
+\IfLanguageName{american}{%
+\newcommand{\mykeywords}{<+mykeywordsen+>}
+\newcommand{\myproject}{tinyDTLS w/ CHACHA20-POLY1305}
+\newcommand{\myversion}{\num{0.4}}
+\newcommand{\mygrade}{<+mygradeen+>}
+\newcommand{\mytitle}{<+mytitleen+>}
+\newcommand{\mydocumenttitle}{Engineer Diploma Thesis Report}
+\newcommand{\mydocumentsubtitle}{End-To-End DTLS based security layer \\ for SafetyNETp}
+\newcommand{\myuniversity}{\mytown University of Applied Sciences\xspace}
+\newcommand{\myinstitute}{The Institute of reliable Embedded Systems and
+  Communications Electronics\xspace}
+\newcommand{\mylistofabbrivations}{List of Abbreviations}
+\newcommand{\mylistings}{List of Listings}
+\newcommand{\myauthorchapter}{Authors}
+\newcommand{\myhistory}{History}
+\newcommand{\mydate}{Date}
+\newcommand{\mysummaryofchanges}{Summary of changes}
+}{}%
+%
+%-------------------------------------------------------------------------------
+% new improved commands
+%-------------------------------------------------------------------------------
+\newcommand{\myfig}[5]{%
+\begin{figure}%
+ \centering%
+ \includegraphics[#2]{figures/#1}%
+ \caption[#4]{#3}%
+ \label{fig:#5}%
+\end{figure}%
+}%
+%\myfig{%figures/path
+%titlepage_fig/logo_ivesk_blau.pdf%
+%}{%options
+%width=\textwidth%
+%}{%caption
+%Sample figure description.%
+%}{%short caption
+%Sample Figure%
+%}{%label, a % have to follow the name
+%sample%
+%}
+\newcommand{\mytableheadfont}[1]{\textbf{\textcolor{white}{#1}}}%
+\newcommand{\mytab}[5]{%
+\begin{table}[H]%
+\centering%
+\begin{tabular}{#1}%
+#5
+\end{tabular}%
+\caption[#3]{#2}%
+\label{#4}%
+\end{table}%
+}%
+%\mytab{%alligment
+%ll%
+%}{% caption
+%Sample table description.
+%}{% short caption
+%Sample Table
+%}{% label, a % have to follow the name
+%sample_table%
+%}{%
+%\toprule
+%ID & Description \\
+%\midrule
+%\num{1} & Just a sample description \\
+%\num{2} & Another description \\
+%\bottomrule
+%}%
+\newcommand{\myeq}[2]{%
+\begin{equation}%
+  \begin{aligned}%
+  #1%
+  \end{aligned}%
+  \label{eq:#2}%
+\end{equation}%
+}%
+
+\newcommand{\mybox}[2]{%
+\newline
+\newline
+\begin{minipage}[l]{0.1\textwidth}%
+%\fbox{%
+\includegraphics[width=0.5\textwidth]{figures/boxes/#1.png}%
+%}
+\end{minipage}%
+%\fbox{%
+\begin{minipage}[l]{0.9\textwidth}%
+#2%
+\end{minipage}\\%
+%}
+}%
+
+% lstlisting is to weak to be embedded in own command
+%\newcommand{\mylisting}[3]{%
+%\begin{lstlisting}[caption={#1},label={lst:#2}]%
+%  #3%
+%\end{lstlisting}%
+%\begin{lstlisting}[caption={How to add code listings},label={lst:sampletwo}]
+% Add code here
+%\end{lstlisting}
+
+
+\IfLanguageName{american}{%
+\newcommand{\myref}[1]{\ref{#1}\xspace}
+\newcommand{\figref}[1]{fig.~\ref{fig:#1}\xspace}
+\newcommand{\tabref}[1]{tab.~\ref{tab:#1}\xspace}
+\newcommand{\equaref}[1]{eq.~\ref{eq:#1}\xspace}
+\newcommand{\lstref}[1]{list.~\ref{lst:#1}\xspace}
+\newcommand{\eg}{e.g.\xspace}
+\newcommand{\vv}{vice versa\xspace}
+}{}%

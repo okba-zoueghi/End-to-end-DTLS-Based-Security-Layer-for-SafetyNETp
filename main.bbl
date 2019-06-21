@@ -1,0 +1,367 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global}
+    \entry{koscher2010experimental}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=42efaec8cc4e2da7a5f57659d3504785}{%
+           family={Koscher},
+           family_i={K\bibinitperiod},
+           given={Karl},
+           given_i={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{42efaec8cc4e2da7a5f57659d3504785}
+      \strng{fullhash}{42efaec8cc4e2da7a5f57659d3504785}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{5}
+      \field{title}{Experimental security analysis of a modern automobile}
+      \field{year}{2010}
+      \verb{url}
+      \verb www.autosec.org/pubs/cars-oakland2010.pdf
+      \endverb
+    \endentry
+    \entry{zurawski2014industrial}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fe61207570bb3cffc0ead3f967d749c4}{%
+           family={{Richard\bibnamedelimb Zurawski}},
+           family_i={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{fe61207570bb3cffc0ead3f967d749c4}
+      \strng{fullhash}{fe61207570bb3cffc0ead3f967d749c4}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{4}
+      \field{title}{{Industrial communication technology handbook}}
+      \field{year}{2014}
+    \endentry
+    \entry{rfc5246}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=08ec417f68aa79300e798f49f83bcaaa}{%
+           family={Dierks},
+           family_i={D\bibinitperiod},
+           given={T.},
+           given_i={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Network Working Group}%
+      }
+      \list{publisher}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{08ec417f68aa79300e798f49f83bcaaa}
+      \strng{fullhash}{08ec417f68aa79300e798f49f83bcaaa}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 5246}
+      \field{month}{08}
+      \field{number}{2}
+      \field{series}{Request for Comments}
+      \field{title}{{The Transport Layer Security (TLS) Protocol Version 1.2}}
+      \field{year}{2008}
+      \verb{url}
+      \verb www.tools.ietf.org/html/rfc5246
+      \endverb
+    \endentry
+    \entry{rfc6347}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a464ebc2e2246c94904b411d84704436}{%
+           family={Rescorla},
+           family_i={R\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force}%
+      }
+      \list{publisher}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{a464ebc2e2246c94904b411d84704436}
+      \strng{fullhash}{a464ebc2e2246c94904b411d84704436}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 6347}
+      \field{month}{01}
+      \field{number}{1}
+      \field{series}{Request for Comments}
+      \field{title}{{Datagram Transport Layer Security Version 1.2}}
+      \field{year}{2012}
+      \verb{url}
+      \verb www.tools.ietf.org/html/rfc6347
+      \endverb
+    \endentry
+    \entry{pilzSafetyNETpForRealTimeEthernet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=302833131a78c926dcf08d3b6cb6a74d}{%
+           prefix={e.},
+           prefix_i={e\bibinitperiod},
+           family={V.},
+           family_i={V\bibinitperiod},
+           given={Safety\bibnamedelimb Network\bibnamedelima International},
+           given_i={S\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{302833131a78c926dcf08d3b6cb6a74d}
+      \strng{fullhash}{302833131a78c926dcf08d3b6cb6a74d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SafetyNET p Real-time Ethernet for complete automation}
+      \verb{url}
+      \verb http://donar.messe.de/exhibitor/hannovermesse/2016/C124313/safetynet-p-realtime-ethernet-eng-294559.pdf
+      \endverb
+    \endentry
+    \entry{kunbusIndustrialEthernet}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Industrial Ethernet}
+      \verb{url}
+      \verb https://www.kunbus.de/industrial-ethernet.html
+      \endverb
+    \endentry
+    \entry{profinet2013ethernet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4be146307cdacd0d89dc65882d239669}{%
+           family={Profinet},
+           family_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{4be146307cdacd0d89dc65882d239669}
+      \strng{fullhash}{4be146307cdacd0d89dc65882d239669}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{6}
+      \field{title}{Industrial Ethernet for real-time applications}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://us.profinet.com/so-is-ethernet-deterministic-or-not/
+      \endverb
+    \endentry
+    \entry{KunbusSafetyNETp}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{SAFETYNET P - FOCUS ON SAFE AUTOMATION}
+      \verb{url}
+      \verb https://www.kunbus.de/safetynet.html
+      \endverb
+    \endentry
+    \entry{JonasFieldbus}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=53cc93067969ee2c5fef66d35b057d0b}{%
+           family={Berge},
+           family_i={B\bibinitperiod},
+           given={Jonas},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{53cc93067969ee2c5fef66d35b057d0b}
+      \strng{fullhash}{53cc93067969ee2c5fef66d35b057d0b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Fieldbuses for Process Control}
+      \verb{url}
+      \verb http://www.science.upm.ro/~traian/web_curs/Scada/docum/fieldbus.pdf
+      \endverb
+    \endentry
+    \entry{SSLHistory}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{{SSL/TLS History}}
+      \verb{url}
+      \verb https://www.acunetix.com/blog/articles/history-of-tls-ssl-part-2/
+      \endverb
+    \endentry
+    \entry{draftTLSv1.3}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a464ebc2e2246c94904b411d84704436}{%
+           family={Rescorla},
+           family_i={R\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force}%
+      }
+      \list{publisher}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{a464ebc2e2246c94904b411d84704436}
+      \strng{fullhash}{a464ebc2e2246c94904b411d84704436}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Draft}
+      \field{title}{{Transport Layer Security Version 1.3}}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://tools.ietf.org/html/draft-ietf-tls-tls13-28
+      \endverb
+    \endentry
+    \entry{designAndImlementationOfDTLS}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a464ebc2e2246c94904b411d84704436}{%
+           family={Rescorla},
+           family_i={R\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a464ebc2e2246c94904b411d84704436}
+      \strng{fullhash}{a464ebc2e2246c94904b411d84704436}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Design and Implementation of Datagram TLS}}
+    \endentry
+    \entry{draftDTLSv1.3}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a464ebc2e2246c94904b411d84704436}{%
+           family={Rescorla},
+           family_i={R\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force}%
+      }
+      \list{publisher}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{a464ebc2e2246c94904b411d84704436}
+      \strng{fullhash}{a464ebc2e2246c94904b411d84704436}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Draft}
+      \field{title}{{Datagram Transport Layer Security Version 1.3}}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://tools.ietf.org/html/draft-ietf-tls-dtls13-28
+      \endverb
+    \endentry
+    \entry{pilz_rail_engineering}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{{Pilz rail engineering}}
+      \verb{url}
+      \verb https://www.pilz.com/en-INT/products-solutions/industry/railway
+      \endverb
+    \endentry
+    \entry{Cryptology}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a2300356ec49b400eb202c370d268bf6}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Tilborg},
+           family_i={T\bibinitperiod},
+           given={Henk\bibnamedelima C.A.},
+           given_i={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {KLUWER ACADEMIC PUBLISHERS}%
+      }
+      \strng{namehash}{a2300356ec49b400eb202c370d268bf6}
+      \strng{fullhash}{a2300356ec49b400eb202c370d268bf6}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{FUNDAMENTALS OF CRYPTOLOGY}}
+      \verb{url}
+      \verb https://hyperelliptic.org/tanja/teaching/cryptoI13/cryptodict.pdf
+      \endverb
+    \endentry
+    \entry{revpi}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c8a55b8fa83b675b57a37b6ff72dcba7}{%
+           family={Kunbus},
+           family_i={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8a55b8fa83b675b57a37b6ff72dcba7}
+      \strng{fullhash}{c8a55b8fa83b675b57a37b6ff72dcba7}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Revolution Pi}}
+      \verb{url}
+      \verb https://revolution.kunbus.com/wp-content/uploads/manuell/datenblatt/revolution_pi_flyer_en.pdf
+      \endverb
+    \endentry
+    \entry{OpenSSL}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{{OpenSSL}}
+      \verb{url}
+      \verb www.openssl.org
+      \endverb
+    \endentry
+    \entry{WolfSSL}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{{WolfSSL}}
+      \verb{url}
+      \verb https://www.wolfssl.com/
+      \endverb
+    \endentry
+    \entry{MatrixSSL}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{{MatrixSSL}}
+      \verb{url}
+      \verb www.github.com/matrixssl/matrixssl
+      \endverb
+    \endentry
+    \entry{MbedTLS}{misc}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{{MatrixSSL}}
+      \verb{url}
+      \verb https://tls.mbed.org/
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

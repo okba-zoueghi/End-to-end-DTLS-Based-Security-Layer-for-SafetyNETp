@@ -1,0 +1,39 @@
+%_____________________________________________________________________________________
+%
+%       Filename:  Conclusion.tex
+%
+%    Description:  Thesis Template HS Offenburg
+%
+%
+%         Author:  Okba ZOUEGHI, okba.zoueghi@gmail.com
+%     Supervisor:  Andreas Walz, Chadlia Jerad
+%   Organization:  HS Offenburg, Offenburg, Germany
+%
+%_____________________________________________________________________________________
+
+\chapter*{General Conclusion and Perspectives}
+\addcontentsline{toc}{chapter}{General Conclusion}
+\markboth{General Conclusion and Perspectives}{}
+
+Today, most of the currently available industrial networks focus mainly on meeting real-time requirements and are designed and developed
+without any built-in security. SafetyNETp is one of the well known and most used Industrial Ethernet protocols, although it does not
+provide any special security measures. SafetyNETp based networks are vulnerable to attacks as it enables unauthorized access in a
+relatively straightforward manner given that all the communications are performed with no authentication, no integrity checks, and no encryption.
+
+Designing and implementing a security layer for SafetyNETp from scratch is a difficult and very error-prone task.
+That's why we were interested in our project by the available protocols which are already tested and assessed by the internet community.
+DTLS and IPsec were the candidate protocols to be used. In fact, our protocol of choice was DTLS, this is mainly because DTLS is situated at the session layer
+whereas IPsec is situated at the network layer. Actually, this makes DTLS a lot easier to integrate.
+
+The implemented DTLS based security layer provides confidentiality, integrity, and authenticity respectively by
+using encryption, MAC algorithms, and certificates. It is obvious that a time and a data overhead will be introduced by
+running those security mechanisms. In fact, the performance tests have shown that the time needed for sending
+and receiving a message over the security layer is around 7 milliseconds using
+TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA256 cipher suite.
+
+SafetyNETp provides two communication models compatible with each other which are RTFN and RTFL. RTFN is
+used when a cycle time over 1 millisecond is sufficient whereas RTFL provides a cycle time at microsecond
+level. The current design and implementation of the security layer concerns only RTFN and does not provide
+any security to RTFL. Therefore, the communication between the secured RTFN and RTFL is not
+possible. In fact, Securing RTFL needs entirely a new design, moreover, as RTFL time constraints are more
+tight, integrating a security layer may affect significantly its cycle time.

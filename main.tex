@@ -1,0 +1,195 @@
+%_____________________________________________________________________________________
+%
+%       Filename:  mains.tex
+%
+%    Description:  Thesis Template HS Offenburg
+%
+%
+%         Author:  Okba ZOUEGHI, okba.zoueghi@gmail.com
+%     Supervisor:  Andreas Walz, Chadlia Jerad
+%   Organization:  HS Offenburg, Offenburg, Germany
+%
+%_____________________________________________________________________________________
+%
+%
+%\newcommand{\firstlanguage}{ngerman}%
+%\newcommand{\secondlanguage}{american}%
+\newcommand{\firstlanguage}{american}%
+\newcommand{\secondlanguage}{ngerman}%
+\newcommand{\mybiblatexfile}{bib/bibliography.bib}
+\newcommand{\mydraft}{false}% Document in draft mode
+% "true" or "false"
+\newcommand{\mytodonotesoptions}{}% "" or disable
+\newcommand{\mylaterality}{oneside}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{5pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+\renewcommand{\\}{\newline \indent}
+
+% "oneside" or "twoside"
+%
+%-------------------------------------------------------------------------------
+% preamble
+%-------------------------------------------------------------------------------
+\input{template/preamble}
+\input{template/macros}
+%-------------------------------------------------------------------------------
+% set to false if you want to write a thesis
+%-------------------------------------------------------------------------------
+\setboolean{report}{true} % if true onepage arabic numbering if false thesis
+\setboolean{myhyperref}{true} %
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%
+% Hyperref should always be the last package added -- no better solution now
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{myhyperref}}%if
+{%
+\usepackage[%
+% \usepackage[%
+% %pdftex = true,%
+% %backref,%
+% %pagebackref=false,% creates backward references too
+% %bookmarks=true,%
+% %bookmarksopen=false,% when starting with AcrobatReader, the Bookmarkcolumn
+% %pdfpagemode=UseOutlines,% None, UseOutlines, UseThumbs, FullScreen
+% %plainpages=false, % correct, if pdflatex complains: ``destination with same
+% %colorlinks=false,% colored box / false colored font
+]{hyperref}%
+\hypersetup{
+  pdftitle    = {\mydocumenttitle},
+  pdfsubject  = {\mydocumenttitle},
+  pdfauthor   = {\myauthor},
+  pdfkeywords = {\mykeywords} ,
+  pdfcreator  = {pdflatex},
+  pdfproducer = {LaTeX with hyperref}
+}%
+}%then
+{}%else
+%
+% If set to "true": the current list of open todos is added after the
+% table of contents. If \mytodonotesoptions is set to "disable", no
+% list of todos is added, independent of this setting here.
+% example for english
+\hyphenation{ex-am-ple hy-phen-ate}
+
+\usepackage[export]{adjustbox}
+%
+%-------------------------------------------------------------------------------
+%	\begin{document}
+%-------------------------------------------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{report}}%if
+{}%then
+{\frontmatter}%KOMA: roman page numbers and such; only available in scrbook
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{report}}%if
+{\input{template/mytitlepage}}%then
+{\input{template/mytitlepage}}
+\cleardoublepage
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{report}}%if
+{\setcounter{page}{1}}%then
+{}%KOMA: roman page numbers and such; only available in scrbook
+%-------------------------------------------------------------------------------
+\pagenumbering{roman} \setcounter{page}{1}
+\ifthenelse{\boolean{report}}%if
+{}%then
+{\input{template/declaration}}% Statutory Declaration
+\cleardoublepage
+%-------------------------------------------------------------------------------
+%	Abstract
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{report}}%if
+{}%then
+{\include{chapter/abstract}\clearpage}% abstract
+%-------------------------------------------------------------------------------
+%	History
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{report}}%if
+{\include{template/history}}% History
+{}%
+%-------------------------------------------------------------------------------
+% List of Abbreviations
+%-------------------------------------------------------------------------------
+\chapter*{\mylistofabbrivations}
+%\addxcontentsline{toc}{chapter}{\mylistofabbrivations}
+\begin{acronym}[XXXXXXXXX]
+\input{template/acronyms}
+\end{acronym}
+%-------------------------------------------------------------------------------
+%	Table of contents
+%-------------------------------------------------------------------------------
+\KOMAoptions{toc=chapterentrydotfill}
+\tableofcontents
+%\addxcontentsline{toc}{chapter}{Table of Contents}
+%-------------------------------------------------------------------------------
+%	List of ...
+%-------------------------------------------------------------------------------
+\listoffigures
+%\addxcontentsline{toc}{chapter}{\listfigurename}
+\listoftables
+%\addxcontentsline{toc}{chapter}{\listtablename}
+% \lstlistoflistings
+%\addxcontentsline{toc}{chapter}{\mylistings}
+\ifthenelse{\boolean{myaddlistoftodos}}
+{\newpage\todototoc \listoftodos}{}
+
+%-------------------------------------------------------------------------------
+%	Body
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{report}}%if
+{}%then
+{\mainmatter}%KOMA: roman page numbers and such; only available in scrbook
+%-------------------------------------------------------------------------------
+% \ac{ivESK} is used on the title page/ reset of the memory \ac{} begins from
+% start
+\acresetall
+%-------------------------------------------------------------------------------
+%\todo[inline]{include chapters here}
+%
+%\IfLanguageName extremly difficult with listings
+% and citations
+%\IfLanguageName{american}{%
+\newpage
+\pagenumbering{arabic}
+\include{chapter/intro_en}
+\include{chapter/chapter1}
+\include{chapter/chapter2}
+\include{chapter/chapter3}
+\include{chapter/chapter4}
+\include{chapter/chapter5}
+\include{chapter/Conclusion}
+%}%
+%
+%
+%
+%
+%
+%-------------------------------------------------------------------------------
+%	Appendix
+%-------------------------------------------------------------------------------
+% add possible appendix
+% \appendix
+% \addpart{Appendix}
+\setcounter{figure}{0}
+\renewcommand\thefigure{A.\arabic{figure}}
+% \include{chapter/appendixa}
+\renewcommand\thefigure{B.\arabic{figure}}
+% \include{chapter/appendixb}
+% \renewcommand\thefigure{C.\arabic{figure}}
+% \include{chapter/appendixc}
+%-------------------------------------------------------------------------------
+%	Bibliography
+%-------------------------------------------------------------------------------
+%
+%\nocite{*}
+\printbibliography
+%
+%
+%-------------------------------------------------------------------------------
+%	\end{document}
+%-------------------------------------------------------------------------------
+\end{document}

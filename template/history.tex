@@ -1,0 +1,145 @@
+%-------------------------------------------------------------------------------
+%
+%       Filename:  history.tex
+%
+%    Description:  The authors and the report history are listed here.
+%
+%        Version:  0.1
+%        Created:  29.04.2016
+%       Revision:  none
+%
+%         Author:  M.Sc. Oliver Kehret, oliver.kehret@hs-offenburg.de
+%   Organization:  ivESK, Offenburg University, Germany
+%      Copyright:  Copyright (c) 2016, M.Sc. Oliver Kehret
+%
+%-------------------------------------------------------------------------------
+%
+% \chapter*{\myauthorchapter}
+% \label{cha:authors}
+% \addxcontentsline{toc}{chapter}{\myauthorchapter}
+% %-------------------------------------------------------------------------------
+% \begin{tabular}{l}
+%   \myauthor    \hspace{5mm}       [youssef.rekik@ensi-uma.tn]
+% \end{tabular}
+% %
+% %
+% %
+% %-------------------------------------------------------------------------------
+% %
+% \ifthenelse{\equal{\mylaterality}{oneside}}%if
+% {{\let\clearpage\relax \chapter*{\myhistory}}}%then
+% {{\let\cleardoublepage\relax \chapter*{\myhistory}}}%
+% \addxcontentsline{toc}{chapter}{\myhistory}
+% \label{cha:history}
+% \begin{tabular}{|l|l|l|l|}
+%   \hline
+%   \rowcolor{iveskblue}
+%   \mytableheadfont{Version} & \mytableheadfont{\myauthorchapter} & \mytableheadfont{\mydate} &\mytableheadfont{\mysummaryofchanges} \\
+%   %\textbf{\textcolor{white}{Version}}   & \textbf{\myauthorchapter} & \textbf{\mydate} & \textbf{\mysummaryofchanges} \\
+%   \hhline{|=|=|=|=|}
+%   \num{0.4} & \myauthor & 01-06-2017 & PSK interoperability w/ WOLFSSL \\
+%   \num{0.3} & \myauthor & 21-04-2017 & Integrated support for X.509 Certificates in tinyDTLS \\
+%   \num{0.2} & \myauthor & 07-04-2017 & ECDHE ECDSA CHACHA20 POLY1305 SHA256 w/ tinyDTLS\\
+%   \num{0.1} & \myauthor & 26-03-2017 & PSK CHACHA20 POLY1305 SHA256 w/ tinyDTLS \\
+%   \hline
+% \end{tabular}
+\chapter*{}
+{  \Huge  \textbf{Signatures} }\newline
+
+\begin{center}
+\textbf{P\textsc{rof}. D\textsc{r.} I\textsc{ng.} A\textsc{xel} S\textsc{ikora} (Scientific Director)}\\
+\begin{figure}[H]
+\centering
+\includegraphics[height=7cm]{figures/titlepage_fig/signature.jpg}
+\label{fig:Signature1}
+\end{figure}
+\textbf{D\textsc{r.} C\textsc{hadlia} J\textsc{erad}}
+\begin{figure}[H]
+\centering
+\includegraphics[height=7cm]{figures/titlepage_fig/signature.jpg}
+\label{fig:Signature1}
+\end{figure}
+\\
+
+\end{center}
+\newpage
+
+\chapter*{Acknowledgments}
+\label{cha:authors}
+%\addxcontentsline{toc}{chapter}{Acknowledgments}
+
+I have the pleasure to express my sincere gratitude to all the people who helped me and who made the successful
+completion of this project possible.
+
+I would like to offer my special thanks to Prof. Dr.-Ing. Axel Sikora for his trust and confidence and for giving me the opportunity
+to join the Institut für verlässliche Embedded Systems und Kommunikationselektronik (ivESK).
+
+I am highly indebted to my supervisor Dipl.-Phys. Andreas Walz for his guidance, encouragement and his highly valuable and
+constructive suggestions during the realization of this work. I extremely appreciate the interesting discussions we
+have had and I am highly thankful for his willingness to give his time so generously.
+
+I would like to express my deep gratitude for my pedagogic supervisor Dr.-Ing. Chadlia Jerad for her supervision, assistance, support
+and help as well as her important remarks and advice that helped to complete this project.
+
+I would like also to thank the jury members for their time and efforts while reviewing my work. Besides, I am thankful to every
+Professor who helped me in my academic career.
+
+This work would not be possible without the support of my family, I would like to especially thank my mother Faouzia, my sister Baraa
+and my brother Souhaib for their help and encouragement.
+
+Last but not least, my deepest gratitude goes to Boutheina for her encouragement and support during this project.
+
+\newpage
+
+\begin{center}
+\textbf{\Large{Abstract}}
+\end{center}
+In today’s automotive and industrial networks, data transmission is, for the most part, performed
+without any special security measures. This security policy weakness can create unforeseen security
+threats to the network, the network resources, and the data.
+SafetyNETp is an Industrial Ethernet protocol used in system automation technology which does not provide
+any security measures for protecting the network. The lack of security measures makes SafeyNETp vulnerable to several attacks.
+The work presented in this project consists of designing and implementing an end-to-end DTLS based security layer for SafetyNETp.
+
+
+%  The work presented in this project is
+% twofold. In the first part, we integrate the \ac{DTLS} protocol over a SafetyNETp
+% Network. In the second part, we evaluate that combination and test the software in a realistic
+% environment. In order to accomplish these two parts, we need to study SafetyNETp and it's
+% implementation, then we study DTLS protocol and find and analyze
+% the existing implementations. Thereafter, we choose the most suitable implementation for our
+% project to finally integrate DTLS with SafetyNETp.
+%
+% The work presented in this project consists of designing and implementing an end-to-end based security l
+% \newline \textbf{Keywords :} Industrial Networks, SafetyNETp, \ac{DTLS}, C, Shell, Linux, Raspberry pi, ivESK, embedded system and software.
+
+\begin{center}
+\textbf{\Large{Résumé}}
+\end{center}
+Aujourd’hui, au sein des réseaux automobiles et industriels, la transmission de données est le plus souvent réalisée
+sans mesures de sécurité spéciales. Cette faiblesse peut créer une menace de sécurité imprévue pour le réseau, les
+ressources du réseau et les données. SafeyNETp est un protocole basé sur l'Ethernet industriel utilisé dans
+l'industrie qui ne fournit aucune mesure de securité ce qui le rend
+vulnérable à plusieurs attaques. Le travail présenté dans ce projet consiste à concevoir et implémenter une
+couche de sécurité basé sur le protocole DTLS qui permet d'assurer une sécurité de bout en bout.
+
+% Le travail présenté dans ce rapport
+% consiste donc, dans sa première partie, à intégrer le protocole de sécurité pour le transport de
+% données (DTLS) à un réseau SafeyNETp et ensuite, dans la deuxième partie, nous évaluons cette combinaison
+% et nous testons le logiciel dans un environnement réaliste. Afin d'accomplir ces deux parties, nous devons
+% étudier SafetyNETp et son implémentation, étudier le potocole DTLS et ensuite trouver et analyser les
+% implémentations existantes. Par la suite, nous choisissons l'implémentation la plus appropriée à notre projet et enfin intégrer
+% DTLS avec SafetyNETp.
+% \newline \textbf{Mots clés :} Réseaux industriels, SafetyNETp, \ac{DTLS}, C, Shell, Linux, Raspberry pi, ivESK, systéme et logiciel embarqué.
+
+\setcode{utf8}
+\begin{arabtext}
+\begin{center}
+\textbf{\Large{مُلَخَّصٌ}}
+\end{center}
+في شبكات الإتصالات المستعملة في السيارات والصناعات اليوم، يتم  نقل البيانات في معظم الحالات دون أي تدابير أمنية خاصة. ضعف هذه السياسة الأمنية يمكن أن يخلق تهديدات على أمن الشبكة و الموارد و البيانات.
+العمل المقدم في هذا المشروع يكمن في جزئين، في الجزء الاول نقوم بدمج بروتوكول حماية طبقة النقل \LR{DTLS} عبر شبكة \LR{SafetyNETp} ، في الجزء الثاني ، نقوم بتقييم ذلك الدمج واختبار البرنامج في بيئة واقعية.
+من أجل تحقيق هذين الجزئين ، نحن بحاجة لدراسة \LR{SafetyNETp} وتطبيقها ، ودراسة \LR{DTLS} بروتوكول  ومن ثم العثور على التطبيقات الحالية المتوفرة ل \LR{DTLS} و من خلال ذلك نقوم  بإختياري  التطبيق الأنسب لنظامنا
+و نقوم أخيراً بالدمج.
+% الكلمات المفاتيح :
+\end{arabtext}

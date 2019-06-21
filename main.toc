@@ -1,0 +1,60 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {american}
+\select@language {american}
+\contentsline {chapter}{General Introduction}{1}{figure.caption.4}
+\contentsline {chapter}{\numberline {1}General Context}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Presentation of the Host Organism}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problem Description}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objective and Proposed Solution}{5}{section.1.3}
+\contentsline {chapter}{\numberline {2}State of the art}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Industrial Networks}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Fieldbus Systems}{8}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Industrial Ethernet}{9}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}SafetyNETp protocol}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Frame layout}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}RTFL}{14}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}RTFN}{15}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Security Protocols}{18}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Secure Sockets Layer/Transport Layer Security}{18}{subsection.2.3.1}
+\contentsline {subsubsection}{\nonumberline Introduction and History}{18}{section*.42}
+\contentsline {subsubsection}{\nonumberline \ac {TLS} Handshake}{19}{section*.47}
+\contentsline {subsubsection}{\nonumberline How the security services are ensured?}{22}{section*.53}
+\contentsline {subsection}{\numberline {2.3.2}Datagram Transport Layer Security}{22}{subsection.2.3.2}
+\contentsline {subsubsection}{\nonumberline Introduction and History}{22}{section*.55}
+\contentsline {subsubsection}{\nonumberline \ac {DTLS} Design}{23}{section*.56}
+\contentsline {subsection}{\numberline {2.3.3}Internet Protocol Security}{23}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Choice of Security Protocol}{26}{section.2.4}
+\contentsline {chapter}{\numberline {3}Requirement Analysis and Specification}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Threat Analysis}{27}{section.3.1}
+\contentsline {section}{\numberline {3.2}Requirement Analysis}{29}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Functional Requirements}{29}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Non-functional Requirements}{29}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Requirement Specification}{30}{section.3.3}
+\contentsline {chapter}{\numberline {4}Design}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Global Design}{33}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}When To Establish The Handshake?}{33}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}SafetyNETp and DTLS Role Mapping}{35}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Secure Communication}{37}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Detailed Design}{39}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Security Layer Positioning}{39}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Flowcharts for Outgoing Messages}{41}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Flowchart for Incoming Messages}{43}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}First Subscription Vulnerability}{45}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Keying Materials Renewal}{46}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Session Closing}{47}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}Frame Layout}{48}{subsection.4.2.7}
+\contentsline {chapter}{\numberline {5}Realization}{50}{chapter.5}
+\contentsline {section}{\numberline {5.1}Work Environment}{50}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Software Environment}{50}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Hardware Environment}{51}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Implementation}{52}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}DTLS Implementation Choice}{52}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}SafetyNETp Plugin Implementation for Wireshark}{54}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Threads and Socket Managment}{55}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Channel Lookup}{59}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Implementation Demo and Performance Test}{61}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Demo}{61}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Performance Test}{66}{subsection.5.3.2}
+\contentsline {chapter}{General Conclusion}{71}{section*.100}
+\contentsline {chapter}{\nonumberline Bibliography}{72}{section*.100}

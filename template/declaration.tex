@@ -1,0 +1,49 @@
+%-------------------------------------------------------------------------------
+%
+%       Filename:  declaration.tex
+%
+%    Description:  The declaration used for bachelor and master thesis at
+%                  Offenburg University.
+%                     
+%
+%        Version:  0.1
+%        Created:  29.04.2016
+%       Revision:  none
+%
+%         Author:  M.Sc. Oliver Kehret, oliver.kehret@hs-offenburg.de
+%   Organization:  ivESK, Offenburg University, Germany
+%      Copyright:  Copyright (c) 2016, M.Sc. Oliver Kehret
+%
+%-------------------------------------------------------------------------------
+\section*{Eidesstattliche Erklärung}
+%
+\foreignlanguage{ngerman}{
+Hiermit  versichere  ich  eidesstattlich,  dass  die  vorliegende  Bachelor
+Thesis von mir selbstständig und ohne unerlaubte fremde Hilfe angefertigt worden
+ist, insbesondere, dass ich alle Stellen, die wörtlich oder  
+annähernd wörtlich oder dem Gedanken nach aus Veröffentlichungen,
+unveröffentlichten Unterlagen und Gesprächen entnommen worden sind,
+als solche an den entsprechenden Stellen innerhalb der Arbeit durch Zitate
+kenntlich gemacht habe, 
+wobei in den Zitaten jeweils der Umfang der entnommenen Originalzitate kenntlich
+gemacht wurde. 
+Ich  bin  mir  bewusst,  dass  eine  falsche  Versicherung  rechtliche Folgen
+haben wird.} 
+
+%\vfill
+
+%% definition of the block tat contains date and signature
+\newcommand{\mysignatureblock}[3]{%
+  %% Sorry, this is a "bit" of a hack. Maybe someone knows a more elegant method?
+  \begin{tabular}{llp{2em}l} 
+  #1 & \hspace{4cm}        & & \hspace{4cm} \\\cline{2-2}\cline{4-4}
+     &                     & & \\[-3mm]
+     & {\footnotesize #2}  & & {\footnotesize #3}
+  \end{tabular}
+}
+
+\mysignatureblock{Offenburg,}{Datum}{Unterschrift}
+
+
+\newpage
+\newpage

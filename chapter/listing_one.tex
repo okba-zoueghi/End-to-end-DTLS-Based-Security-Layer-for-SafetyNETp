@@ -1,0 +1,53 @@
+%-------------------------------------------------------------------------------
+%
+%       Filename:  listing_two.tex
+%
+%    Description:  The file shows a hack for the use of lstlisting package with
+%                  IfLanguagepackage
+%
+%        Version:  0.1
+%        Created:  02.05.2016
+%       Revision:  none
+%
+%         Author:  M.Sc. Oliver Kehret, oliver.kehret@hs-offenburg.de
+%   Organization:  ivESK, Offenburg University, Germany
+%      Copyright:  Copyright (c) 2016, M.Sc. Oliver Kehret
+%
+%-------------------------------------------------------------------------------
+\begin{lstlisting}[caption={Security layer configuration file},label={config_file}]
+/**
+ * @brief Set Security Layer Frame byte value
+ */
+#define SECURITY_LAYER_FRAME_BYTE             0x88
+/**
+ * @brief Configure the renewing session interval in seconds
+ */
+#define RENEWING_SESSION_INTERVAL              20
+/**
+ * @brief Configure the period of time to wait after renewing the session to
+ * switch using the new DTLS context
+ */
+#define DTLS_CONTEXT_SWITCH_TIME               4
+/**
+ * @brief Set the max value for the channel ID, when this value is reached
+ * the next value will be 0x00
+ */
+#define MAX_CHANNEL_ID_VALUE                   0xff
+/**
+ * @brief Define this macro to print the Handshakes log
+ */
+#define PRINT_HANDSHAKE_LOG
+/**
+ * @brief Define this macro to print the Threads log
+ * (Server and Client IP, channel ID, renewing session timer)
+ */
+#define PRINT_THREADS_LOG
+/**
+ * @brief Define this macro to print the outgoing messages (plaintext)
+ */
+#define PRINT_O_MSG
+/**
+ * @brief Define this macro to print the incoming messages (plaintext)
+ */
+#define PRINT_I_MSG
+\end{lstlisting}

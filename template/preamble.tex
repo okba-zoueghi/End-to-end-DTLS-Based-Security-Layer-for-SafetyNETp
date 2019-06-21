@@ -1,0 +1,414 @@
+%-------------------------------------------------------------------------------
+%
+%       Filename:  preamble.tex
+%
+%    Description:  Complete Latex preamble is here.
+%                     
+%
+%        Version:  0.1
+%        Created:  29.04.2016
+%       Revision:  none
+%
+%         Author:  M.Sc. Oliver Kehret, oliver.kehret@hs-offenburg.de
+%   Organization:  ivESK, Offenburg University, Germany
+%      Copyright:  Copyright (c) 2016, M.Sc. Oliver Kehret
+%
+%-------------------------------------------------------------------------------
+%
+\newcommand{\mylanguage}{\secondlanguage,\firstlanguage}
+\documentclass[%
+    fontsize=12pt,
+	paper=A4,
+	parskip=half,
+	DIV=24,%calc
+	headinclude=true,		
+	footinclude=true,
+	open=right,
+	appendixprefix=true,% include appendix?
+	bibliography=totoc,% include an unnumbered unit of bibliography to the table
+                       % of contents 
+    draft=\mydraft,
+	BCOR=00mm,% binding correction (depends on how you bind
+	             % the resulting printout.
+	\mylaterality,% alternative: twoside
+    \mylanguage,
+    plainheadsepline=true,
+    plainfootsepline=true, 
+]{scrbook}
+%-------------------------------------------------------------------------------
+% ifthen 
+%-------------------------------------------------------------------------------
+\usepackage{ifthen}                                         
+% pre-define ifthen-boolean variables:
+\newboolean{report}
+\newboolean{myhyperref}
+\newboolean{myaddlistoftodos}
+\newboolean{withgnuplot}
+\setboolean{withgnuplot}{false}
+%-------------------------------------------------------------------------------
+%
+%
+%-------------------------------------------------------------------------------
+% General presentation
+%
+%-------------------------------------------------------------------------------
+% full utf8 character set
+\usepackage[utf8]{inputenc}
+% language adaptions, change in main.tex (english, ngerman, american)
+\usepackage[\mylanguage]{babel}									
+\usepackage{iflang}
+%
+\usepackage{lmodern}
+% encode characters better, so that they can be copied out of .pdf in one piece
+\usepackage[T1]{fontenc}    
+% nicer quotes  
+%
+\usepackage[onehalfspacing]{setspace}
+%
+\IfLanguageName{ngerman}{%
+\usepackage[%
+            autostyle,          % adapts language setting
+            german=quotes,
+            strict,             % turns warnings into errors 
+]{csquotes}
+}{}
+\IfLanguageName{american}{%
+\usepackage[%
+            autostyle,          % adapts language setting
+            strict,             % turns warnings into errors 
+            english=american    % use american quotes style
+]{csquotes}
+}{}
+%
+%-------------------------------------------------------------------------------
+% Color definitions
+%-------------------------------------------------------------------------------
+\usepackage[table,usenames,dvipsnames]{xcolor}		
+\definecolor{light-gray}{gray}{0.95}	% define some colors
+\definecolor{dark-green}{rgb}{0,0.6,0}
+\definecolor{iveskblue}{RGB}{0,63,97}
+%
+%-------------------------------------------------------------------------------
+% ivESK style
+%
+%-------------------------------------------------------------------------------
+\usepackage{scrlayer-scrpage}
+\usepackage{scrhack}%silence warning old packages
+\pagestyle{plain.scrheadings}% or scrheadings
+\clearscrheadfoot
+\setkomafont{pageheadfoot}{%
+  \scriptsize% 
+}
+ \usepackage{fancyhdr} 
+\fancyhf{}
+%supprimelesentetesetpiedsexistant
+%\fancyhead[LE,LO]{\bfseries{Projet de fin d'?tudes}}
+\fancyhead[RE,RO]{\bfseries\leftmark}
+\fancyfoot[LE,LO]{\textit {Institut f{\"u}r verl{\"a}ssliche Embedded Systems und Kommunikationselektronik (ivESK)\\National School of Computer Science (ENSI)}} \fancyfoot[RE,RO]{\bfseries\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\addtolength{\headheight}{0.5pt}
+%\addtolength{\footheight}{0.5pt} %espacepourlefilet
+\fancypagestyle{plain}{%pages de tetes de chapitre
+\fancyhead{}%supprimelentete
+\renewcommand{\headrulewidth}{0pt}%etlefilet
+} \pagestyle{fancy}
+\usepackage{lastpage}
+\rofoot*{Page \thepage~of~\pageref{LastPage}}
+%\KOMAoptions{headheight=0cm}
+%\KOMAoptions{footheight=0cm}
+\KOMAoptions{headsepline=1pt:\textwidth}
+\KOMAoptions{footsepline=1pt:\textwidth}
+\setkomafont{headsepline}{\color{iveskblue}}
+\setkomafont{footsepline}{\color{iveskblue}}% change colors of seperation lines
+%
+\RedeclareSectionCommand[
+  beforeskip=1.5\baselineskip,
+  afterskip=0.5\baselineskip]{chapter}
+\RedeclareSectionCommand[
+  beforeskip=1\baselineskip,
+  afterskip=0.5\baselineskip]{section}
+\RedeclareSectionCommand[
+  beforeskip=0.1\baselineskip,
+  afterskip=1pt]{subsection}
+\RedeclareSectionCommand[
+  beforeskip=2pt,
+  afterskip=1pt]{subsubsection}
+%
+%-------------------------------------------------------------------------------
+% includes pictures --> possible to include them in header/footer
+%-------------------------------------------------------------------------------
+%
+\usepackage[pdftex]{graphicx}										
+%-------------------------------------------------------------------------------
+% footnotes
+%-------------------------------------------------------------------------------
+\usepackage[perpage, hang]{footmisc}% footnote options
+%perpage: Nummerierung der Fußnoten auf jeder Seite neu beginnen
+%hang: Fußnote über mehrere zeilen richtig einrücken
+%
+%-------------------------------------------------------------------------------
+% placeins \FloatBarrier forces places of floats
+%-------------------------------------------------------------------------------
+\usepackage[verbose, %
+section,% force for section automatically
+]
+{placeins}										
+%
+%-------------------------------------------------------------------------------
+% bibliography with biber/biblatex
+%
+%-------------------------------------------------------------------------------
+\usepackage[backend=biber, % using "biber" to compile references (instead of
+                           % "biblatex") 
+style=numeric-comp,% see biblatex documentation
+style=numeric,% see biblatex documentation
+backref=true,% create backlings from references to citations
+natbib=true,% offering natbib-compatible commands
+hyperref=true,%
+sorting=none,% using hyperref-package references
+]{biblatex}% remove, if using BibTeX instead of biblatex
+\addbibresource{\mybiblatexfile} % remove, if using BibTeX instead of biblatex
+%
+%-------------------------------------------------------------------------------
+% SIUNITSX -- simplified usage of SI-units
+%-------------------------------------------------------------------------------
+%
+\usepackage[% 
+            exponent-product=\cdot,% use \cdot instead * for exponent product
+            binary-units=true,%
+            load-configurations=binary,%
+            load-configurations=abbreviations,%
+]{siunitx}	              
+%
+%
+%-------------------------------------------------------------------------------
+% todonotes puts to-do-notes in the printed document if you want 
+%-------------------------------------------------------------------------------
+%
+\IfLanguageName{american}{\usepackage[\mytodonotesoptions,english]{todonotes}}{}
+\IfLanguageName{ngerman}{\usepackage[\mytodonotesoptions,ngerman]{todonotes}}{}
+%
+%-------------------------------------------------------------------------------
+% Sourcecode printing
+%-------------------------------------------------------------------------------
+%
+\usepackage{listings}				% include source code
+									% ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+\lstset{% 							% options for representation of source code
+backgroundcolor=\color{light-gray},% choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+breaklines=true,                 % sets automatic line breaking
+captionpos=b,                    % sets the caption-position to bottom
+commentstyle=\color{dark-green}, % comment style
+deletekeywords={...},            % if you want to delete keywords from the given language
+escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+frame=lines,                     % adds a frame around the code
+keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+keywordstyle=\color{blue},       % keyword style
+language=C,                      % the language of the code
+morekeywords={*,...},            % if you want to add more keywords to the set
+numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+numbersep=8pt,                   % how far the line-numbers are from the code
+numberstyle=\tiny\color{gray},   % the style that is used for the line-numbers
+rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+showstringspaces=false,          % underline spaces within strings only
+showtabs=false,                  % show tabs within strings adding particular underscores
+stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+stringstyle=\color{blue},        % string literal style
+tabsize=2,                       % sets default tabsize to 2 spaces
+title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+%numberbychapter=false
+}%
+%
+%-------------------------------------------------------------------------------
+% Math 
+%-------------------------------------------------------------------------------
+%
+\usepackage{amssymb,amstext,amsmath} % predefiened symbols e.g. \nparallel
+\usepackage[%
+            fleqn,%equations aligned in a fixed distance from the left
+            tbtags, %where the equation number is placed here bottom or top
+]{mathtools} % loads amsmath package
+%
+%-------------------------------------------------------------------------------
+% Tables, figures etc.
+%-------------------------------------------------------------------------------
+%
+\usepackage{hhline}
+%
+\usepackage{colortbl}
+% nice rule's for tables try \toprule \midrule \bottomrule  
+\usepackage{booktabs}
+% set width of table and more
+\usepackage{tabularx}										% creates tables
+%
+% rotate tables and figures
+\usepackage{rotating}
+%
+% rotate tables and figures
+\usepackage{multirow}
+%
+% define caption style
+\addtokomafont{caption}{\small} 	% small captions
+\usepackage[font=small,% 
+width=0.9\textwidth,% 
+format=plain,% 
+labelfont=bf,%
+]{caption}
+\captionsetup[figure]{%
+name=Fig.,%
+labelfont=bf,%
+textfont=it,%
+}
+\captionsetup[table]{%
+name=Tab.,%
+labelfont=bf,%
+textfont=it,%
+}
+%
+%
+\usepackage{subfigure}
+%-------------------------------------------------------------------------------
+% list of acronym's
+%-------------------------------------------------------------------------------
+\usepackage[printonlyused]{acronym}
+%
+%-------------------------------------------------------------------------------
+% some utility stuff
+%
+%-------------------------------------------------------------------------------
+%
+%
+% improved typographical settings
+\usepackage[%
+    protrusion=true, %
+    factor=900       %
+]{microtype}
+%
+% switch of extra space after punctuation
+\frenchspacing 
+%
+% switches to Palatino with small caps and old style figures
+\usepackage[%
+sc,%
+osf,%
+]{mathpazo}
+%
+% customize item look
+\usepackage{enumitem}
+% kills space between items
+\setlist{noitemsep}%
+\setlist[itemize,2]{label={$\circ$}} 
+\setlist[itemize,3]{label={\tiny$\blacksquare$}} 
+
+% For additional special characters available by \verb#\ding{}#
+\usepackage{pifont}  % Sonderzeichen fuer Titelseite \ding{}
+%
+% This package is required for intelligent spacing after commands
+\usepackage{xspace}
+%
+%
+% This package offers strikethrough command \verb+\sout{foobar}+.
+\usepackage[normalem]{ulem}
+%
+%
+% Create framed, shaded, or differently highlighted regions that can 
+% break across pages.  The environments defined are 
+% \begin{itemize}
+%   \item framed: ordinary frame box (\verb+\fbox+) with edge at margin
+%   \item shaded: shaded background (\verb+\colorbox+) bleeding into margin
+%   \item snugshade: similar
+%   \item leftbar: thick vertical line in left margin
+% \end{itemize}
+\usepackage{framed}
+%
+% For example on title pages you might want to have a logo on the upper right
+% corner of the first page (only). The package \texttt{eso-pic} is able to place
+% things on absolute and relative positions on the whole page.
+\usepackage{eso-pic} %
+%
+%-------------------------------------------------------------------------------
+% Rename directories with babel package
+%-------------------------------------------------------------------------------
+\addto\captionsamerican{% Replace "american" with the language you use
+  \renewcommand{\contentsname}%
+    {Table of Contents}%
+}
+%
+%-------------------------------------------------------------------------------
+% Own Colors for header, captions etc.
+%
+%-------------------------------------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows}%
+\tikzstyle{memblock} = [draw, fill=blue!20, rectangle, 
+    minimum height=6em, minimum width=3em]%
+\definecolor{mygray}{cmyk}{0,0,0,0.4}%
+\definecolor{mydarkgray}{cmyk}{0,0,0,0.7}%
+\definecolor{mylightgray}{cmyk}{0,0,0,0.1}%
+%
+%-------------------------------------------------------------------------------
+% interface with gnuplot latex terminal
+%-------------------------------------------------------------------------------
+\ifthenelse{\boolean{withgnuplot}}%if
+{
+\usepackage{gnuplot-lua-tikz}
+}{%
+}%
+%-------------------------------------------------------------------------------
+%tikz flow chart
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.25em, text badly centered, node distance=2cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=2.5em, text centered, rounded corners, minimum height=1em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=2cm,
+    minimum height=1em]
+%
+%Plottiing
+%-------------------------------------------------------------------------------
+\usepackage{lipsum}%insert blindtext for testing
+%-------------------------------------------------------------------------------
+\usepackage[\firstlanguage]{isodate}% several date options
+%-------------------------------------------------------------------------------
+%
+%-------------------------------------------------------------------------------
+\usepackage{fancyhdr}
+%\usepackage{supertabular}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{float}
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+\pgfkeys{/pgf/number format/use comma,/pgf/number format/set thousands separator
+  = } 
+%
+% prevent club & widow penalty
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty10000
+%
+%
+%-------------------------------------------------------------------------------
+% pdfcompresslevel from 0 to 10; std is fine 
+%-------------------------------------------------------------------------------
+%
+\pdfcompresslevel=6 
+\usepackage{nameref}
+\usepackage{epigraph}
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+\usepackage{rotating}
+\usepackage{arabtex}
+\usepackage{utf8}

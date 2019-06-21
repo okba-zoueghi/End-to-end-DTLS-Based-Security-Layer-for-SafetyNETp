@@ -1,0 +1,65 @@
+\chapter*{General Introduction}
+\addcontentsline{toc}{chapter}{General Introduction}
+\markboth{General Introduction}{}
+
+Nowadays, the industry is going more and more towards automation technology which is about automating industrial
+plants and their machines to such an extent that they independently do a job without the involvement of people.
+Although humans can control machines and industrial plants, they would not intervene in their work process.
+Thus, when a work process starts, human errors are eliminated. As a result, there is a significant
+increase in the quality of the products created.
+
+The modern automated systems and field instruments currently being used are no longer mere mechanical devices,
+they are mostly controlled and managed by digital computers\cite{koscher2010experimental}. The majority of
+those systems and devices have not been designed with security measures\cite{zurawski2014industrial}. In fact,
+many years ago, the motivation and the interest for hackers to compromise them was little or even inexistent.
+However, nowadays with new concepts such as Industrial Ethernet, Connected-Cars, Autonomous Vehicles and \ac{IoT}, the motivation for attacking those systems is increasing significantly.
+
+Recently, multiple studies \cite{koscher2010experimental} demonstrated that the risk exists for automated systems to be
+infiltrated by malicious attackers that are potentially able to gain access via several methods. Despite this concrete threat,
+most of the industrial communication protocols do not have any built-in provisions to prevent or mitigate these attacks and
+no security aspect is part of the software or hardware architecture development
+process.
+
+Current industrial communication protocols, including SafetyNETp, SafetyBUSp, \ac{CAN}, and
+\ac{LIN}, are vulnerable to attacks. Actually, they enable unauthorized access
+in a relatively straightforward manner given that all the communications are performed with no authentication \cite{zurawski2014industrial}.
+However, we are convinced that security can be taken into account in the early phases of
+the development cycle of automated systems, both by implementing security protocols
+which can assure the authentication of the sender, the integrity of the message and the availability
+of the network, as well as by enforcing software programming standards that prevent software defects.
+
+\ac{TLS} is the most widely deployed protocol for securing network traffic. It is widely used for
+protecting Web traffic, for instance, \ac{HTTPS} the secure version of \ac{HTTP} is secured using \ac{TLS}. \ac{TLS} is also
+used for securing e-mail protocols such as \ac{IMAP} and \ac{POP}. The primary advantage of \ac{TLS} is
+that it provides in a transparent way confidentiality, integrity, and authenticity to a given connection-oriented channel. Thus, it is
+easy to secure an application protocol by inserting \ac{TLS} between the application layer and the transport
+layer \cite{rfc5246}. However, \ac{TLS} must run over a reliable transport channel typically the \ac{TCP}. Therefore, it cannot be
+used to secure unreliable datagram traffic. The requirement for datagram semantics automatically prohibits the
+use of \ac{TLS} and for this purpose, there exists \ac{DTLS} which provides \ac{TLS}'s services for unreliable datagram
+protocols such as the \ac{UDP} \cite{rfc6347}.
+
+Alongside \ac{TLS}, \ac{IPsec} is also a commonly used protocol for securing network traffic. It is implemented
+in the network layer and it provides security for both IPv4 and IPv6 traffics. Operating on the network layer
+makes \ac{IPsec} transparent and independent from the application layer, this, in fact, eases the security
+management in multiapplication environments. \ac{IPsec} is mostly used for creating a \ac{VPN}.
+
+In this context, part of the funding program from \ac{DAAD}, we have integrated the \ac{ivESK} to perform our end of studies project.
+Our project consists of designing and developing a security layer for SafetyNETp which is a protocol for Ethernet-based Fieldbus communication
+in automation technology. Moreover, after the development, a test of the implementation is required to get an idea about
+the potential behavior of secured SafetyNETp networks in a realistic environment.
+
+During the first chapter, we see a brief presentation of the host organism then we present the
+problem description as well as the objective and the proposed solution. Throughout the second chapter, we present an overview of industrial networks and the target protocol of our project (SafetyNETp),
+thereafter we move to present the available security protocols for securing network traffic and finally discuss our choice.
+In the third chapter we go through a brief security analysis and we outline the requirements specification and analysis.
+The fourth chapter is dedicated to the design of our security layer, it structured into two parts, the first part
+discusses the global design and the second part discusses the detailed design.
+Along the fifth and the last chapter, we present some implementation details and we test the performance of
+our solution.
+
+% In this context, part of the funding program from \ac{DAAD}, we have integrated the \ac{ivESK}, which was formed to focus on wired and wireless networks of
+% embedded systems, as well as their interconnection in "Cyber-Physical Systems" (CPS) and data
+% security and privacy aspects. \ac{ivESK} is especially active in the area of design and implementation of integrated
+% security architectures for communications solutions using embedded systems \cite{ivESK} where our end of studies project is taking place.
+% In fact, this project consists of developing a security layer for SafetyNETp which is a protocol for Ethernet-based Fieldbus communication in automation technology.
+% Moreover, at the end of this project, a test of the implementation is required to get an idea about the potential behavior of secured SafetyNETp networks in a realistic environment.

@@ -1,0 +1,57 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {american}
+\select@language {american}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 1.1}{\ignorespaces Lack of authentication exploit\relax }}{4}{figure.caption.22}
+\contentsline {figure}{\numberline {\relax 1.2}{\ignorespaces SafetyNETp in the OSI reference model}}{5}{figure.caption.26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Centralized point-to-point architecture\relax }}{8}{figure.caption.28}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Fieldbus network\relax }}{9}{figure.caption.30}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces Data encapsulation for non-critical-time applications\relax }}{11}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces Data encapsulation for critical-time applications\relax }}{11}{figure.caption.33}
+\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces Master/Slave communication}}{12}{figure.caption.34}
+\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces Publish subscribe communication}}{13}{figure.caption.35}
+\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces Mapping of SafetyNETp frame into Ethernet frame and UDP datagram\relax }}{14}{figure.caption.36}
+\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces RTFL physical line\relax }}{15}{figure.caption.37}
+\contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces RTFL Ethernet frame\relax }}{15}{figure.caption.38}
+\contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces RTFN frame and messages type\relax }}{16}{figure.caption.39}
+\contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces RTFN Publish/Subscribe communication\relax }}{17}{figure.caption.40}
+\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces TLS protocol architecture\relax }}{19}{figure.caption.46}
+\contentsline {figure}{\numberline {\relax 2.13}{\ignorespaces SSL/TLS full handshake\relax }}{20}{figure.caption.48}
+\contentsline {figure}{\numberline {\relax 2.14}{\ignorespaces TLS cipher suite example\relax }}{21}{figure.caption.49}
+\contentsline {figure}{\numberline {\relax 2.15}{\ignorespaces IPsec communication modes\relax }}{24}{figure.caption.58}
+\contentsline {figure}{\numberline {\relax 2.16}{\ignorespaces IPsec protocols\relax }}{25}{figure.caption.63}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Pilz railway heater system}}{29}{figure.caption.65}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces General use case diagram\relax }}{31}{figure.caption.66}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Possible cases of handshake establishement\relax }}{34}{figure.caption.68}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Simultaneous mutual subscription\relax }}{37}{figure.caption.70}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Nominal case of a secure communication\relax }}{38}{figure.caption.71}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces The security layer and SafetyNETp in TCP/IP model\relax }}{39}{figure.caption.72}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Man in the middle attack exploiting unprotected subscription\relax }}{40}{figure.caption.73}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Flowchart for outgoing messages\relax }}{42}{figure.caption.74}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Flowchart for incoming messages\relax }}{44}{figure.caption.75}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Keying Materials Renewal\relax }}{47}{figure.caption.76}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces The security layer frame layout\relax }}{49}{figure.caption.77}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Revolution Pi\relax }}{52}{figure.caption.80}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Wireshark capture without our plugin\relax }}{54}{figure.caption.82}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Wireshark capture after integrating our plugin\relax }}{55}{figure.caption.83}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Threads and sockets\relax }}{57}{figure.caption.84}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Socket concurrent access\relax }}{58}{figure.caption.85}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Prioritization of \textit {cyclic data} messages over handshake messages\relax }}{59}{figure.caption.86}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Comparison between $O(n)$ and $O(log(n))$\relax }}{60}{figure.caption.87}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Test environment\relax }}{61}{figure.caption.88}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces The first handshake establishment\relax }}{62}{figure.caption.89}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Session renewal threads\relax }}{62}{figure.caption.90}
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces SafetyNETp timeout log\relax }}{63}{figure.caption.91}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces SafetyNETp original cyclic data message\relax }}{63}{figure.caption.92}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Secured cyclic data message\relax }}{64}{figure.caption.93}
+\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Certificate example\relax }}{65}{figure.caption.95}
+\contentsline {figure}{\numberline {\relax 5.15}{\ignorespaces SafetyNETp before integrating the security layer\relax }}{67}{figure.caption.96}
+\contentsline {figure}{\numberline {\relax 5.16}{\ignorespaces SafetyNETp after integrating the security layer\relax }}{68}{figure.caption.97}
+\contentsline {figure}{\numberline {\relax 5.17}{\ignorespaces Data overhead\relax }}{69}{figure.caption.98}
+\contentsline {figure}{\numberline {\relax 5.18}{\ignorespaces Startup time overhead\relax }}{70}{figure.caption.99}
+\addvspace {10\p@ }
